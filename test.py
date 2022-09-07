@@ -15,5 +15,9 @@ class simpletest(unittest.TestCase):
         res = StringCalculator().add("4")
         self.assertEqual(res, 4)
 
+    def test_mult_num_add(self):
+        res = StringCalculator().add("3,6,1")
+        self.assertEqual(res, 3 + 6 + 1)
+
 if __name__ == '__main__':
     unittest.main()

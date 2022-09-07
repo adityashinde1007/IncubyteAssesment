@@ -6,9 +6,7 @@ class StringCalculator:
 
         x = s.split(',')
         ans = 0
-        if len(x) == 1:
-            ans = int(x[0])
-        elif len(x) == 2:
-            ans = int(x[0]) + int(x[1])
+        for i in x:
+            ans += int(i)
 
         return ans
