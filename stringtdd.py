@@ -7,6 +7,9 @@ class StringCalculator:
         x = s.split(',')
         ans = 0
         for i in x:
-            ans += int(i)
+            if i.isalpha():
+                ans += ord(i) - 96
+            else:
+                ans += int(i)
 
         return ans

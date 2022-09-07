@@ -19,5 +19,13 @@ class simpletest(unittest.TestCase):
         res = StringCalculator().add("3,6,1")
         self.assertEqual(res, 3 + 6 + 1)
 
+    def test_third_step(self):
+        res = StringCalculator().add("3,6,1,c")
+        self.assertEqual(res, 3 + 6 + 1 + 3)
+
+    def test_third_2_step(self):
+        res = StringCalculator().add("b,z,1,c")
+        self.assertEqual(res, 2 + 26 + 1 + 3)
+
 if __name__ == '__main__':
     unittest.main()
