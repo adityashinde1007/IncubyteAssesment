@@ -55,6 +55,10 @@ class simpletest(unittest.TestCase):
         res = StringCalculator().add("1003,2000,a,c")
         self.assertEqual(res, 4)
 
+    def test_newline_del_step(self):
+        res = StringCalculator().add("13\n2000\na,c")
+        self.assertEqual(res, 17)
+
 
 if __name__ == '__main__':
     unittest.main()

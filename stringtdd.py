@@ -4,6 +4,7 @@ class StringCalculator:
         if len(s) == 0:
             return 0
 
+        s.replace('\n', ',')
         list_of_num = s.split(',')
         sum_of_num = 0
         neagtive = []
