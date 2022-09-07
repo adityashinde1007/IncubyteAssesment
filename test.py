@@ -32,10 +32,14 @@ class simpletest(unittest.TestCase):
         self.assertEqual(res, 7)
 
     def test_negative_step(self):
-        self.assertRaises(ValueError, StringCalculator().add, "1,2,-3,a,c")
+        with self.assertRaises(Exception) as e:
+            StringCalculator().add("1,2,-3,a,c")
+        print(e.exception)
 
     def test_negative_2_step(self):
-        self.assertRaises(ValueError, StringCalculator().add, "-9")
+        with self.assertRaises(Exception) as e:
+            StringCalculator().add("-9,3,4")
+        print(e.exception)
 
 if __name__ == '__main__':
     unittest.main()

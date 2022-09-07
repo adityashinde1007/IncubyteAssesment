@@ -10,7 +10,7 @@ class StringCalculator:
             if i.isalpha():
                 sum_of_num += ord(i) - 96
             elif int(i) < 0:
-                raise ValueError("Negatives not allowed.")
+                raise Exception("Negatives not allowed.", i)
             else:
                 sum_of_num += int(i)
 
