@@ -41,5 +41,15 @@ class simpletest(unittest.TestCase):
             StringCalculator().add("-9,3,4")
         print(e.exception)
 
+    def test_multiple_negative_step(self):
+        with self.assertRaises(Exception) as e:
+            StringCalculator().add("-9,3,-4,a")
+        print(e.exception)
+
+    def test_multiple_negative_2_step(self):
+        with self.assertRaises(Exception) as e:
+            StringCalculator().add("-10,-76,34,-22,z")
+        print(e.exception)
+
 if __name__ == '__main__':
     unittest.main()
