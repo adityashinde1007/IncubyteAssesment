@@ -4,12 +4,14 @@ class StringCalculator:
         if len(s) == 0:
             return 0
 
-        x = s.split(',')
-        ans = 0
-        for i in x:
+        list_of_num = s.split(',')
+        sum_of_num = 0
+        for i in list_of_num:
             if i.isalpha():
-                ans += ord(i) - 96
+                sum_of_num += ord(i) - 96
+            elif int(i) < 0:
+                raise ValueError("Negatives not allowed.")
             else:
-                ans += int(i)
+                sum_of_num += int(i)
 
-        return ans
+        return sum_of_num

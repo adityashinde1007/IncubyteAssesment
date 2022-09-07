@@ -27,5 +27,15 @@ class simpletest(unittest.TestCase):
         res = StringCalculator().add("b,z,1,c")
         self.assertEqual(res, 2 + 26 + 1 + 3)
 
+    def test_third_3_step(self):
+        res = StringCalculator().add("1,2,a,c")
+        self.assertEqual(res, 7)
+
+    def test_negative_step(self):
+        self.assertRaises(ValueError, StringCalculator().add, "1,2,-3,a,c")
+
+    def test_negative_2_step(self):
+        self.assertRaises(ValueError, StringCalculator().add, "-9")
+
 if __name__ == '__main__':
     unittest.main()
