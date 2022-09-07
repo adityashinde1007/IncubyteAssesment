@@ -10,6 +10,8 @@ class StringCalculator:
         for i in list_of_num:
             if i.isalpha():
                 sum_of_num += ord(i) - 96
+            elif int(i) > 1000:
+                continue
             elif int(i) < 0:
                 neagtive.append(i)
             else:
